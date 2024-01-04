@@ -1,0 +1,12 @@
+div {
+  border: solid black 2px;
+  width: 600px;
+}
+p {
+  background-color: greenyellow;
+  padding: 25px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  border: solid black 4px;
+  margin: 25px;
+}

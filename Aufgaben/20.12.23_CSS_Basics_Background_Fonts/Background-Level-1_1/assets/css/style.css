@@ -1,0 +1,9 @@
+header {
+  background-color: linen;
+}
+header h1 {
+  background-color: lightblue;
+}
+article {
+  background-image: url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlfHx8fHx8MTcwMzA3NTU0Mw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+}
