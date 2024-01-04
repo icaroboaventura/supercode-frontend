@@ -1,0 +1,35 @@
+* {
+  /* - page reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* - 1rem =~ 16px   */
+  font-size: 62.5%;
+  /* - now 1rem = 10px */
+}
+
+legend {
+  margin-left: 1.5vw;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+  font-size: 2vw;
+}
+form {
+  padding: 2vw;
+}
+
+.email-pass {
+  margin-bottom: 1vh;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin-right: 0.8vw;
+  padding: 0.5vw;
+}
