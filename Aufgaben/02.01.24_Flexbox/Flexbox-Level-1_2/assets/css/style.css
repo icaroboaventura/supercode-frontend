@@ -1,0 +1,36 @@
+* {
+  /* - page reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* - 1rem =~ 16px   */
+  font-size: 62.5%;
+  /* - now 1rem = 10px */
+}
+header {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/305-3840x2160.jpg) no-repeat center;
+  background-size: cover;
+}
+nav {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5vw;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+nav p {
+  margin: 0.5vh 0 0.5vh 1.5vw;
+}
+.nav-links {
+  margin: 0.5vh 1.5vw 0.5vh 0;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}

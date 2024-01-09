@@ -1,0 +1,63 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../font/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+  font-weight: bolder;
+}
+h3::first-letter {
+  color: green;
+  font-size: 50px;
+}
+ul li:nth-of-type(1)::first-letter {
+  color: lightblue;
+  font-size: 30px;
+  text-decoration: overline;
+}
+ul li:nth-of-type(2)::first-letter {
+  color: darkred;
+  font-size: 30px;
+  text-decoration: underline;
+}
+ul li:nth-of-type(3)::first-letter {
+  color: lightgreen;
+  font-size: 30px;
+  text-decoration: line-through;
+}
+ul li:nth-of-type(3) {
+  text-decoration: line-through;
+}
+
+section p:nth-of-type(1) {
+  text-indent: 40px;
+}
+section p:nth-of-type(1)::first-line {
+  font-size: 18px;
+}
+section p:nth-of-type(2),
+section p:nth-of-type(4),
+section p:nth-of-type(6) {
+  font-size: 20px;
+}
+section p:nth-of-type(2)::first-line,
+section p:nth-of-type(3)::first-line,
+section p:nth-of-type(4)::first-line,
+section p:nth-of-type(5)::first-line,
+section p:nth-of-type(6)::first-line {
+  color: green;
+}
+section p:nth-of-type(2)::first-letter,
+section p:nth-of-type(3)::first-letter,
+section p:nth-of-type(4)::first-letter,
+section p:nth-of-type(5)::first-letter,
+section p:nth-of-type(6)::first-letter {
+  color: darkred;
+  font-size: 30px;
+}
+section p:nth-of-type(2):hover::first-line,
+section p:nth-of-type(3):hover::first-line,
+section p:nth-of-type(4):hover::first-line,
+section p:nth-of-type(5):hover::first-line,
+section p:nth-of-type(6):hover::first-line {
+  color: darkblue;
+}

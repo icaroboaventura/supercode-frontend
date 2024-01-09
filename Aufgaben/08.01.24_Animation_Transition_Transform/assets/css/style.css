@@ -1,0 +1,341 @@
+* {
+  /* - page reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h2 {
+  font-size: clamp(0.01rem, 3vw, 2.5rem);
+  margin: 10vw 10vw;
+  align-self: center;
+}
+
+h3 {
+  font-size: clamp(0.01rem, 3vw, 2.5rem);
+  margin: 10vw 10vw;
+  align-self: center;
+}
+
+p {
+  font-size: clamp(0.01rem, 2vw, 2rem);
+}
+
+section {
+  margin: 10vw 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* - transform-Level-1_1 */
+
+.transform-Level-1_1 div {
+  background-color: aquamarine;
+  border-radius: 20px;
+  width: 10vw;
+  height: 10vw;
+  transition: 0.5s;
+}
+
+.transform-Level-1_1 div:hover {
+  transform: scale(1.5) rotate(90deg);
+  transform-origin: bottom left;
+}
+
+/* - transform-Level-1_2 */
+
+.transform-Level-1_2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.transform-Level-1_2 article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transform-Level-1_2 article div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  border-radius: 20px;
+  width: 10vw;
+  height: 10vw;
+  margin: 3vw 3vw;
+  transition: 0.5s;
+}
+
+.transform-Level-1_2 div:nth-of-type(1):hover {
+  transform: translate(3vw, 3vw);
+}
+.transform-Level-1_2 div:nth-of-type(2):hover {
+  transform: translateX(-3vw);
+}
+.transform-Level-1_2 div:nth-of-type(3):hover {
+  transform: translateX(3vw);
+}
+.transform-Level-1_2 div:nth-of-type(4):hover {
+  transform: rotate(45deg);
+}
+.transform-Level-1_2 div:nth-of-type(5):hover {
+  transform: scaleY(1.5);
+}
+.transform-Level-1_2 div:nth-of-type(6):hover {
+  transform: skew(15deg, 15deg);
+}
+
+/* - transition-Level-1_1 */
+
+.transition-Level-1_1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.transition-Level-1_1 article {
+  align-self: flex-start;
+}
+
+.transition-Level-1_1 article div {
+  background-color: aquamarine;
+  border-radius: 20px;
+  width: 10vw;
+  height: 10vw;
+  margin: 3vw 3vw;
+}
+
+.transition-Level-1_1 article div {
+  transition: width 1s;
+}
+
+.transition-Level-1_1 article div:hover {
+  width: 70vw;
+}
+
+/* - transition-Level-1_2 */
+
+.transition-Level-1_2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.transition-Level-1_2 article {
+  align-self: flex-start;
+}
+
+.transition-Level-1_2 article div {
+  background-color: aquamarine;
+  border-radius: 20px;
+  width: 10vw;
+  height: 10vw;
+  margin: 3vw 3vw;
+}
+
+.transition-Level-1_2 article div:nth-of-type(1) {
+  animation: move_left 2s infinite;
+}
+.transition-Level-1_2 article div:nth-of-type(2) {
+  animation: move_left 2s infinite 0.5s;
+}
+
+@keyframes move_left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(65vw);
+  }
+}
+
+/* - transition-Level-2_1 */
+
+.transition-Level-2_1 article {
+  width: 50vw;
+  height: 50vw;
+  background: url(../img/1065-2160x2160.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.transition-Level-2_1 article div {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.21),
+    rgba(200, 200, 200, 0.875)
+  );
+  color: beige;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vw;
+  position: absolute;
+  display: none;
+}
+
+.transition-Level-2_1 article:hover div {
+  display: flex;
+  animation: bottom_top 0.5s;
+}
+
+@keyframes bottom_top {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* - animation-Level-2_2 */
+
+.animation-Level-2_2 article {
+  width: 80vw;
+  height: 80vw;
+  position: relative;
+  background-color: bisque;
+}
+
+.animation-Level-2_2 div {
+  background-color: aquamarine;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  margin: 3vw 3vw;
+  animation: rotate360 4s infinite;
+  position: absolute;
+}
+
+@keyframes rotate360 {
+  0%,
+  100% {
+    background-color: green;
+  }
+  25% {
+    transform: translateX(65vw);
+    background-color: red;
+  }
+  50% {
+    transform: translate(65vw, 65vw);
+    background-color: blue;
+  }
+  75% {
+    transform: translateY(65vw);
+    background-color: black;
+  }
+}
+
+/* - animation-Level-2_3 */
+
+.animation-Level-2_3 article {
+  width: 80vw;
+  height: 80vw;
+  position: relative;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-Level-2_3 div {
+  width: 50vw;
+  height: 50vw;
+  background: url(../img/1065-2160x2160.jpg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+}
+
+.animation-Level-2_3 div:hover {
+  animation: shadow 3s infinite ease-in-out normal;
+}
+
+@keyframes shadow {
+  0%,
+  100% {
+    box-shadow: 0 0 75px 30px white;
+  }
+  50% {
+    box-shadow: 30px 30px 60px 20px blue, -30px -30px 60px 20px lightblue;
+  }
+}
+
+/* - animation-Level-3_2 */
+
+.animation-Level-3_2 article div:nth-of-type(1) {
+  width: 2vw;
+  height: 2vw;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+.animation-Level-3_2 article div:nth-of-type(2) {
+  width: 2vw;
+  height: 2vw;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+.animation-Level-3_2 article div:nth-of-type(3) {
+  width: 2vw;
+  height: 2vw;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+.animation-Level-3_2 article div:nth-of-type(4) {
+  width: 2vw;
+  height: 2vw;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+.animation-Level-3_2 article div:nth-of-type(5) {
+  width: 2vw;
+  height: 2vw;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+
+.animation-Level-3_2 article {
+  display: flex;
+  gap: 1.5vw;
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2vw);
+  }
+  60% {
+    transform: translateY(-2vw);
+  }
+}
+
+.animation-Level-3_2 article div:nth-of-type(1) {
+  animation: loading 1s infinite ease-in-out;
+}
+.animation-Level-3_2 article div:nth-of-type(2) {
+  animation: loading 1s infinite ease-in-out 0.2s;
+}
+.animation-Level-3_2 article div:nth-of-type(3) {
+  animation: loading 1s infinite ease-in-out 0.4s;
+}
+.animation-Level-3_2 article div:nth-of-type(4) {
+  animation: loading 1s infinite ease-in-out 0.6s;
+}
+.animation-Level-3_2 article div:nth-of-type(5) {
+  animation: loading 1s infinite ease-in-out 0.8s;
+}

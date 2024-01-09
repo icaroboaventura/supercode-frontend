@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img1,
+.img2,
+.img3 {
+  display: block;
+  margin: 2rem;
+}
+
+.img1:hover {
+  outline: 5px double lightblue;
+  outline-offset: -20px;
+}
+.img2:hover {
+  filter: grayscale(100%);
+}
+.img3:hover {
+  border-radius: 100%;
+}
