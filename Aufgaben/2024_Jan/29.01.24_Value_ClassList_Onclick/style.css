@@ -1,0 +1,63 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+span {
+  color: red;
+}
+
+.bg-generator {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg-generator input {
+  width: 200px;
+}
+
+.bg-generator label {
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.code-output {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.c-l-1-1-und-2-1 {
+  width: 500px;
+}
+
+.c-l-1-1-und-2-1 h3,
+h2 {
+  text-align: center;
+}
+
+.c-l-1-1-und-2-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hl-3-style {
+  font-size: 35px;
+  color: brown;
+}

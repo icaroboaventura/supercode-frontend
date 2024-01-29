@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>29.01.24_Value_ClassList_Onclick</title>
+  </head>
+  <body>
+    <main>
+      <h2>Forms-Level-1_1</h2>
+      <form onsubmit="" class="f-l-1-1">
+        <label for="name">Name <span>*</span></label>
+        <div>
+          <input type="text" id="vorname" required placeholder="Vorname" />
+          <input type="text" id="nachname" required placeholder="Nachname" />
+        </div>
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" />
+        <label for="thema">Thema</label>
+        <select id="thema">
+          <option value="general">General</option>
+          <option value="advertise">Advertise</option>
+          <option value="partnership">Partnership</option>
+        </select>
+        <label for="textfield">Nachricht <span>*</span></label>
+        <textarea id="textfield" cols="30" rows="10" required></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+      <h2>Forms-JS-Level-1_2</h2>
+      <form onsubmit="return false" class="f-js-l-1-2">
+        <label for="year">Birth Year => Age</label>
+        <input type="number" id="year" />
+        <input type="submit" value="Calculate" onclick="calculateAge()" />
+      </form>
+      <p class="age-output"></p>
+      <h2>Forms-JS-Level-1_3</h2>
+      <form onsubmit="return false" class="f-js-l-1-2">
+        <label for="year">Age Difference</label>
+        <input type="number" id="age-one" placeholder="Age 1" />
+        <input type="number" id="age-two" placeholder="Age 2" />
+        <input type="submit" value="Calculate" onclick="calculateAgeDif()" />
+      </form>
+      <p class="age-dif-output"></p>
+      <h2>Forms-JS-Level-3_3</h2>
+      <div class="bg-generator">
+        <form>
+          <label for="red">Red</label>
+          <input
+            type="range"
+            min="0"
+            max="250"
+            id="red"
+            value="0"
+            step="1"
+            onChange="bgGenerator()"
+          />
+          <label for="green">Green</label>
+          <input
+            type="range"
+            min="0"
+            max="250"
+            id="green"
+            value="0"
+            step="1"
+            onChange="bgGenerator()"
+          />
+          <label for="blue">Blue</label>
+          <input
+            type="range"
+            min="0"
+            max="250"
+            id="blue"
+            value="0"
+            step="1"
+            onChange="bgGenerator()"
+          />
+          <p class="code-output"></p>
+        </form>
+      </div>
+      <div class="c-l-1-1-und-2-1">
+        <h2>Classlist-Level-1_1 & Classlist-Level-2_1</h2>
+        <h3 onclick="stylen()" class="hl-3">Lorem, ipsum dolor.</h3>
+        <ul class="liste">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat
+            ullam officiis consectetur?
+          </li>
+        </ul>
+        <div>
+          <button onclick="stylen()">Style</button>
+          <button onclick="remove()">Reset</button>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
