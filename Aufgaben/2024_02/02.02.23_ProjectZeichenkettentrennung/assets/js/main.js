@@ -6,39 +6,35 @@ function slicing() {
   ).value;
   const beforeOutput = document.body.querySelector(".before");
   const afterOutput = document.body.querySelector(".after");
+  const errorOutput = document.body.querySelector("h2");
 
-  //   console.log(inputSlicing);
-  //   console.log(inputString);
   console.log(slicingPart);
-  //   console.log(beforeOutput);
-  //   console.log(afterOutput);
 
-  // --------- Before
-
-  //   console.log(inputString.slice(0, inputString.indexOf(inputSlicing)));
-  //   console.log(inputString.slice(inputString.indexOf(inputSlicing)));
-
-  // --------- After
-
-  if (slicingPart === "before") {
-    const beforeStringOne = inputString.slice(
-      0,
-      inputString.indexOf(inputSlicing)
-    );
-    const beforeStringTwo = inputString.slice(
-      inputString.indexOf(inputSlicing)
-    );
-    beforeOutput.innerHTML = beforeStringOne;
-    afterOutput.innerHTML = beforeStringTwo;
+  if (inputString.includes(inputSlicing)) {
+    if (slicingPart === "before") {
+      const beforeStringOne = inputString.slice(
+        0,
+        inputString.indexOf(inputSlicing)
+      );
+      const beforeStringTwo = inputString.slice(
+        inputString.indexOf(inputSlicing)
+      );
+      beforeOutput.innerHTML = beforeStringOne;
+      afterOutput.innerHTML = beforeStringTwo;
+    } else {
+      const afterStringOne = inputString.slice(
+        0,
+        inputString.indexOf(inputSlicing)
+      );
+      const slicingAdd = afterStringOne + inputSlicing;
+      const afterStringTwo = inputString.slice(
+        inputString.indexOf(inputSlicing)
+      );
+      const slicingSub = afterStringTwo.replace(inputSlicing, "");
+      beforeOutput.innerHTML = slicingAdd;
+      afterOutput.innerHTML = slicingSub;
+    }
   } else {
-    const afterStringOne = inputString.slice(
-      0,
-      inputString.indexOf(inputSlicing)
-    );
-    const slicingAdd = afterStringOne + inputSlicing;
-    const afterStringTwo = inputString.slice(inputString.indexOf(inputSlicing));
-    const slicingSub = afterStringTwo.replace(inputSlicing, "");
-    beforeOutput.innerHTML = slicingAdd;
-    afterOutput.innerHTML = slicingSub;
+    errorOutput.textContent = "Write your string down";
   }
 }
