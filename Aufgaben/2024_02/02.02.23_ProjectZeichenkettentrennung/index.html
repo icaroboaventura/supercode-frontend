@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>String Slicing Generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <h1>String Slicing Generator</h1>
+        <form onsubmit="return false">
+          <label for="string-input">Your String:</label>
+          <input type="text" id="string-input" required />
+          <label for="slicing-input">Slice by:</label>
+          <input type="text" id="slicing-input" required />
+          <div>
+            <input
+              type="radio"
+              id="before"
+              value="before"
+              name="slicing-part"
+              checked
+            />
+            <label for="before">Before</label>
+            <input type="radio" id="after" value="after" name="slicing-part" />
+            <label for="after">After</label>
+          </div>
+          <input type="submit" value="SLICE" onclick="slicing()" />
+        </form>
+        <h2>Output</h2>
+        <h3>Before Part</h3>
+        <p class="before"></p>
+        <h3>After Part</h3>
+        <p class="after"></p>
+      </main>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
