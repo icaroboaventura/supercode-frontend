@@ -6,7 +6,7 @@ function slicing() {
   ).value;
   const beforeOutput = document.body.querySelector(".before");
   const afterOutput = document.body.querySelector(".after");
-  const errorOutput = document.body.querySelector("h2");
+  const errorOutput = document.body.querySelector("h4");
 
   console.log(slicingPart);
 
@@ -21,6 +21,7 @@ function slicing() {
       );
       beforeOutput.innerHTML = beforeStringOne;
       afterOutput.innerHTML = beforeStringTwo;
+      errorOutput.textContent = "";
     } else {
       const afterStringOne = inputString.slice(
         0,
@@ -33,8 +34,9 @@ function slicing() {
       const slicingSub = afterStringTwo.replace(inputSlicing, "");
       beforeOutput.innerHTML = slicingAdd;
       afterOutput.innerHTML = slicingSub;
+      errorOutput.textContent = "";
     }
   } else {
-    errorOutput.textContent = "Write your string down";
+    errorOutput.textContent = "Error: (Slice by:) not found in your string";
   }
 }
