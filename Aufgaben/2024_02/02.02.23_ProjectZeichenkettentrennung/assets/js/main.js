@@ -10,33 +10,35 @@ function slicing() {
 
   console.log(slicingPart);
 
-  if (inputString.includes(inputSlicing)) {
-    if (slicingPart === "before") {
-      const beforeStringOne = inputString.slice(
-        0,
-        inputString.indexOf(inputSlicing)
-      );
-      const beforeStringTwo = inputString.slice(
-        inputString.indexOf(inputSlicing)
-      );
-      beforeOutput.innerHTML = beforeStringOne;
-      afterOutput.innerHTML = beforeStringTwo;
-      errorOutput.textContent = "";
+  if (inputString.length > 0 && inputSlicing.length > 0) {
+    if (inputString.includes(inputSlicing)) {
+      if (slicingPart === "before") {
+        const beforeStringOne = inputString.slice(
+          0,
+          inputString.indexOf(inputSlicing)
+        );
+        const beforeStringTwo = inputString.slice(
+          inputString.indexOf(inputSlicing)
+        );
+        beforeOutput.innerHTML = beforeStringOne;
+        afterOutput.innerHTML = beforeStringTwo;
+        errorOutput.textContent = "";
+      } else {
+        const afterStringOne = inputString.slice(
+          0,
+          inputString.indexOf(inputSlicing) + 1
+        );
+        const afterStringTwo = inputString.slice(
+          inputString.indexOf(inputSlicing) + 1
+        );
+        beforeOutput.innerHTML = afterStringOne;
+        afterOutput.innerHTML = afterStringTwo;
+        errorOutput.textContent = "";
+      }
     } else {
-      const afterStringOne = inputString.slice(
-        0,
-        inputString.indexOf(inputSlicing)
-      );
-      const slicingAdd = afterStringOne + inputSlicing;
-      const afterStringTwo = inputString.slice(
-        inputString.indexOf(inputSlicing)
-      );
-      const slicingSub = afterStringTwo.replace(inputSlicing, "");
-      beforeOutput.innerHTML = slicingAdd;
-      afterOutput.innerHTML = slicingSub;
-      errorOutput.textContent = "";
+      errorOutput.textContent = "Error: (Slice by:) not found in your string";
     }
   } else {
-    errorOutput.textContent = "Error: (Slice by:) not found in your string";
+    errorOutput.textContent = "Error: not found a string or slice";
   }
 }
