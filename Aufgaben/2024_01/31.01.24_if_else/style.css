@@ -11,6 +11,11 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+}
+
+.luft-bg p {
+  font-weight: bold;
 }
 
 section {
@@ -18,5 +23,18 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
+}
+
+#luft {
+  width: 300px;
+}
+
+.luft-bg {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>if_else</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Conditionals-Level-1_1</h2>
+        <form>
+          <input type="number" name="age" id="age" />
+          <input type="button" value="Check" onclick="adult()" />
+        </form>
+        <p class="output-age"></p>
+      </section>
+      <section>
+        <h2>Conditionals-Level-1_3</h2>
+        <h3>Darf ich Shisha rauchen?</h3>
+        <form>
+          <input type="number" name="age" id="age-shisha" />
+          <input type="button" value="Check" onclick="shisha()" />
+        </form>
+        <p class="output-shisha"></p>
+      </section>
+      <section>
+        <h2>Conditionals-Level-2_2</h2>
+        <div class="luft-bg">
+          <p class="luft-q">Luftqualität:</p>
+          <form>
+            <input
+              type="range"
+              name="luft"
+              id="luft"
+              min="0"
+              max="150"
+              value="50"
+              onchange="luftcheck()"
+            />
+          </form>
+          <p class="concern"></p>
+          <p class="effect"></p>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
