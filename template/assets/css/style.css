@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../font/OpenSans-VariableFont_wdthwght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100svh;
+  font-family: "Open Sans";
+}
