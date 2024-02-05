@@ -26,14 +26,17 @@ function slicing() {
       } else {
         const afterStringOne = inputString.slice(
           0,
-          inputString.indexOf(inputSlicing) + 1
+          inputString.indexOf(inputSlicing) + inputSlicing.length
         );
         const afterStringTwo = inputString.slice(
-          inputString.indexOf(inputSlicing) + 1
+          inputString.indexOf(inputSlicing) + inputSlicing.length
         );
         beforeOutput.innerHTML = afterStringOne;
         afterOutput.innerHTML = afterStringTwo;
         errorOutput.textContent = "";
+        console.log(afterStringOne);
+        console.log(inputString.slice(0, inputString.indexOf(inputSlicing)));
+        console.log(afterStringTwo);
       }
     } else {
       errorOutput.textContent = "Error: (Slice by:) not found in your string";
