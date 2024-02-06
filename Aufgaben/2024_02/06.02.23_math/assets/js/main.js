@@ -173,4 +173,4 @@ const guess = (guessNum) => {
   }
 };
 
-guess(4);
+guess(6);

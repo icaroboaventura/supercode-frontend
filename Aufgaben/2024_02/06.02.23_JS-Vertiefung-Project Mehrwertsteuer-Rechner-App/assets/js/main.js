@@ -20,7 +20,7 @@ const rechner = () => {
   } else if (mehrwertsteuer === "abziehen" && steuerSatz === "neunzehn") {
     mwBetrag.innerHTML = `${(betrag - betrag / 1.19).toFixed(2)} €`;
     endpreis.innerHTML = `${(betrag / 1.19).toFixed(2)}  €`;
-  } else if (mehrwertsteuer === "abziehen" && steuerSatz === "sieben") {
+  } else {
     mwBetrag.innerHTML = `${(betrag - betrag / 1.07).toFixed(2)} €`;
     endpreis.innerHTML = `${(betrag / 1.07).toFixed(2)}  €`;
   }
