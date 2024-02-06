@@ -58,11 +58,14 @@ changeTwo.innerHTML = `Change Two: ${
 let sentence;
 
 const words = one.split(" ");
-for (let i = 0; i < words.length; i++) {
-  words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+console.log(words);
+for (let zied = 0; zied < words.length; zied++) {
+  words[zied] = words[zied][0].toUpperCase() + words[zied].slice(1);
 }
+console.log(words);
 
 let makeString = words.toString();
+console.log(makeString);
 sentence = makeString.replaceAll(",", " ");
 changeThree.innerHTML = `Change Three: ${sentence}`;
 
@@ -71,7 +74,7 @@ changeThree.innerHTML = `Change Three: ${sentence}`;
 const find = () => {
   const text = document.body.querySelector(".sm_2_3 article").innerText;
   const sValue = document.body.querySelector("#search-input").value;
-  document.querySelector("article").innerHTML = text.replaceAll(
+  document.querySelector(".sm_2_3 article").innerHTML = text.replaceAll(
     sValue,
     `<span class="bg">${sValue}</span>`
   );
