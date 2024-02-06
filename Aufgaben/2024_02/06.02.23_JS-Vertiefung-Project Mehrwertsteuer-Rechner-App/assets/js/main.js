@@ -2,17 +2,14 @@
 // Mehrwertsteuer-Rechner
 //----------------------------------------------------
 
-const mwBetrag = document.querySelector(".mw-betrag");
-const endpreis = document.querySelector(".endpreis");
-
 const rechner = () => {
   const mehrwertsteuer = document.querySelector(
     'input[name="auf-oder-ab"]:checked'
   ).value;
-
   const steuerSatz = document.querySelector('input[name="satz"]:checked').value;
-
   const betrag = Number(document.querySelector("#betrag").value);
+  const mwBetrag = document.querySelector(".mw-betrag");
+  const endpreis = document.querySelector(".endpreis");
 
   if (mehrwertsteuer === "aufschlagen" && steuerSatz === "neunzehn") {
     mwBetrag.innerHTML = `${(betrag * 0.19).toFixed(2)} €`;
