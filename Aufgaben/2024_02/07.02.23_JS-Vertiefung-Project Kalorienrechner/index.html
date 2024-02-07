@@ -11,11 +11,11 @@
       <main>
         <form onsubmit="return false">
           <label for="körper-größer-input">Körpergrößer</label>
-          <input type="number" id="körper-größer-input" />
+          <input type="number" id="körper-größer-input" min="0" step="any" />
           <label for="alter-input">Alter</label>
-          <input type="number" id="alter-input" />
+          <input type="number" id="alter-input" min="0" step="any" />
           <label for="gewicht-input">Gewicht</label>
-          <input type="number" id="gewicht-input" />
+          <input type="number" id="gewicht-input" min="0" step="any" />
           <div>
             <input type="radio" name="geschlecht-input" value="männlich" id="männlich" checked />
             <label for="männlich">Männlich</label>
