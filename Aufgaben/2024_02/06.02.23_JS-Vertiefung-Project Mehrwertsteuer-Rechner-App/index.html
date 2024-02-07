@@ -19,6 +19,7 @@
                 name="auf-oder-ab"
                 id="aufschlagen"
                 value="aufschlagen"
+                onclick="changeNetto()"
                 checked
               />
               <label for="aufschlagen"
@@ -31,6 +32,7 @@
                 name="auf-oder-ab"
                 id="abziehen"
                 value="abziehen"
+                onclick="changeBrutto()"
               />
               <label for="abziehen"
                 >Mehrwertsteuer abziehen (Brutto zu Netto)</label
@@ -44,19 +46,21 @@
                 type="radio"
                 name="satz"
                 id="neunzehn"
-                value="neunzehn"
+                value="0.19"
                 checked
               />
               <label for="aufschlagen">19%</label>
             </div>
             <div>
-              <input type="radio" name="satz" id="sieben" value="sieben" />
+              <input type="radio" name="satz" id="sieben" value="0.07" />
               <label for="abziehen">7%</label>
             </div>
           </section>
           <section>
             <label class="betrag" for="betrag"
-              >Betrag in Euro <span>*</span></label
+              >Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span
+                >*</span
+              ></label
             >
             <input type="number" id="betrag" min="0" step="0.01" required />
           </section>
@@ -68,7 +72,7 @@
           <p class="mw-betrag">€</p>
         </div>
         <div>
-          <h2>Betrag (Endpreis)</h2>
+          <h2 class="end-heading">Bruttobetrag (Endpreis)</h2>
           <p class="endpreis">€</p>
         </div>
       </main>
