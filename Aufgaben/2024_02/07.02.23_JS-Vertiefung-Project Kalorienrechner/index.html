@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title></title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <form onsubmit="return false">
+          <label for="körper-größer-input">Körpergrößer</label>
+          <input type="number" id="körper-größer-input" />
+          <label for="alter-input">Alter</label>
+          <input type="number" id="alter-input" />
+          <label for="gewicht-input">Gewicht</label>
+          <input type="number" id="gewicht-input" />
+          <div>
+            <input type="radio" name="geschlecht-input" value="männlich" id="männlich" checked />
+            <label for="männlich">Männlich</label>
+          </div>
+          <div>
+            <input type="radio" name="geschlecht-input" value="weiblich" id="weiblich" />
+            <label for="weiblich">Weiblich</label>
+          </div>
+          <select name="belastung" id="belastung">
+            <option value="0.95">Schlafen</option>
+            <option value="1.2">Nur Sitzen oder Liegen</option>
+            <option value="1.5">Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der Freizeit, z.B. Büroarbeit</option>
+            <option value="1.7">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+            <option value="1.9">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker, Hausfrauen</option>
+            <option value="2.2">Körperlich anstrengende berufliche Arbeit</option>
+          </select>
+          <input type="submit" onclick="calculate()" />
+        </form>
+        <section>
+          <div>
+            <p class="pOne">kcal</p>
+            <p class="pTwo">kJ</p>
+            <p class="pThree">Grundumsatz</p>
+            <p class="pFour"></p>
+            <p class="pFive"></p>
+            <p class="pSix">Gesamtumsatz</p>
+            <p class="pEight"></p>
+            <p class="pNine"></p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
