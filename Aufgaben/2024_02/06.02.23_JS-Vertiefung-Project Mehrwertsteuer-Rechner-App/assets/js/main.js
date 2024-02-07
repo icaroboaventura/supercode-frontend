@@ -9,13 +9,11 @@
 const betragLabel = document.querySelector(".betrag");
 const endHeading = document.querySelector(".end-heading");
 const changeNetto = () => {
-  betragLabel.innerHTML =
-    "Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span>";
+  betragLabel.innerHTML = "Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span>";
   endHeading.innerHTML = "Bruttobetrag (Endpreis)";
 };
 const changeBrutto = () => {
-  betragLabel.innerHTML =
-    "Bruttobetrag (Preis mit Mehrwertsteuer) in Euro<span>*</span>";
+  betragLabel.innerHTML = "Bruttobetrag (Preis mit Mehrwertsteuer) in Euro<span>*</span>";
   endHeading.innerHTML = "Nettobetrag (Endpreis)";
 };
 
@@ -24,12 +22,8 @@ const changeBrutto = () => {
 //----------------------------------------------------
 
 const rechner = () => {
-  const mehrwertsteuer = document.querySelector(
-    'input[name="auf-oder-ab"]:checked'
-  ).value;
-  const steuerSatz = Number(
-    document.querySelector('input[name="satz"]:checked').value
-  );
+  const mehrwertsteuer = document.querySelector('input[name="auf-oder-ab"]:checked').value;
+  const steuerSatz = Number(document.querySelector('input[name="satz"]:checked').value);
   console.log(steuerSatz);
   const betrag = Number(document.querySelector("#betrag").value);
   const mwBetrag = document.querySelector(".mw-betrag");
