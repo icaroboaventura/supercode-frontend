@@ -9,8 +9,6 @@ const calculate = () => {
   const gesamtUmsatzKcal = document.querySelector(".pEight");
   const gesamtUmsatzKj = document.querySelector(".pNine");
 
-  console.log(körperGrößer, alter, geschlecht, gewicht, pal);
-
   if (geschlecht === "männlich") {
     const kcal = (66.47 + 13.7 * gewicht + 5 * körperGrößer - 6.8 * alter).toFixed(2);
     grundUmsatzKcal.innerHTML = kcal;
