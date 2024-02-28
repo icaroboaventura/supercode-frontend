@@ -1,0 +1,15 @@
+button {
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: yellowgreen;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+img {
+  width: 300px;
+  border-radius: 10px;
+}
