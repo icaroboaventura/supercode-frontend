@@ -1,0 +1,11 @@
+.add-sub-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add-sub-div button {
+  width: 30px;
+  height: 30px;
+}

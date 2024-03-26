@@ -1,0 +1,13 @@
+.state-2-2 {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dark {
+  background-color: darkgrey;
+  color: white;
+}
